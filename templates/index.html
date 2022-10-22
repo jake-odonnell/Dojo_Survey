@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="container-sm text-center mt-3 d-flex justify-content-center" >
-        <form action="/submit" method="post" class = "border border-5 p-3 col-4 bg-secondary shadow">
+        <form action="/process" method="post" class = "border border-5 p-3 col-4 bg-secondary shadow">
+            <!-- First and Last name input -->
             <div>
                 <label for="f_name" class=" mb-3 col-3 fw-bold">First Name:</label>
                 <input type="text" name="f_name" class=" mb-3 col-5 border border-dark border-2">
@@ -18,23 +19,46 @@
                 <label for="l_name" class=" mb-3 col-3 fw-bold">Last Name:</label>
                 <input type="text" name="l_name" class=" mb-3 col-5 border border-dark border-2">
             </div>
-            <div class="form-check col-4 justify-content-start">
-                <div>
-                    <input type="radio" id='html' name="current_stack" value="HTML" class="form-check-input">
-                    <label for="html" class="form-check-label fw-bold">HTML</label>
+            <div class="d-flex justify-content-around">
+                <!-- Radio buttons for current stack -->
+                <div class="form-check col-4 justify-content-start">
+                    <div>
+                        <input type="radio" id='html' name="current_stack" value="HTML" class="form-check-input">
+                        <label for="html" class="form-check-label fw-bold">HTML</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="current_stack" id="python" value="PYTHON" class="form-check-input">
+                        <label for="python" class="form-check-label fw-bold">Python</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="current_stack" id="Java" value="JAVA" class="form-check-input">
+                        <label for="java" class="form-check-label fw-bold">Java</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="current_stack" id="java_script" value="JAVA_SCRIPT" class="form-check-input">
+                        <label for="java_script" class="form-check-label fw-bold">Java Script</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" name="current_stack" id="python" value="PYTHON" class="form-check-input">
-                    <label for="python" class="form-check-label fw-bold">Python</label>
-                </div>
-                <div>
-                    <input type="radio" name="current_stack" id="Java" value="JAVA" class="form-check-input">
-                    <label for="java" class="form-check-label fw-bold">Java</label>
-                </div>
-                <div>
-                    <input type="radio" name="current_stack" id="java_script" value="JAVA_SCRIPT" class="form-check-input">
-                    <label for="java_script" class="form-check-label fw-bold">Java Script</label>
-                </div>
+
+                <!-- Check boxes for current knowledge -->
+                <fieldset class="form-check col-4 justify-content-start">
+                    <div>
+                        <input type="checkbox" id='html' name="stack" value="HTML" class="form-check-input">
+                        <label for="html" class="form-check-label fw-bold">HTML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="stack" id="python" value="Python" class="form-check-input">
+                        <label for="python" class="form-check-label fw-bold">Python</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="stack" id="Java" value="JAVA" class="form-check-input">
+                        <label for="java" class="form-check-label fw-bold">Java</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="stack" id="java_script" value="JAVA_Script" class="form-check-input">
+                        <label for="java_script" class="form-check-label fw-bold">Java Script</label>
+                    </div>
+                </fieldset>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
